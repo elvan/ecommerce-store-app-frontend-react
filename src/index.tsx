@@ -4,15 +4,16 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import { RouterProvider } from 'react-router-dom';
-import { StoreProvider } from './app/context/StoreContext';
 import './app/layout/styles.css';
 import { router } from './app/router/Routes';
+import { store } from './app/store/configureStore';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <StoreProvider>
+    <Provider store={store}>
       <RouterProvider router={router} />
-    </StoreProvider>
+    </Provider>
   </React.StrictMode>
 );
