@@ -6,6 +6,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { RouterProvider } from 'react-router-dom';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
 import './app/layout/styles.css';
 import { router } from './app/router/Routes';
 import { store } from './app/store/configureStore';
